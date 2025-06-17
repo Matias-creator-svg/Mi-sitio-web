@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi sitio con Tailwind</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+</head>
+<body class="antialiased text-gray-800">
+  <style>
+  .font-bebas {
+    font-family: 'Bebas Neue', sans-serif;
+  }
+</style>
+
+  <!-- Menú de navegación -->
+  <nav class="bg-orange-500 shadow-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <div class="flex-shrink-0">
+          <a href="#" class="text-xl font-semibold text-white">Info Dragon Ball Xenoverse</a>
+        </div>
+        <div class="hidden md:flex space-x-4">
+          <a href="#" class="text-white px-3 py-2 rounded-md text-sm font-medium">Inicio</a>
+          <a href="#" class="text-white px-3 py-2 rounded-md text-sm font-medium">Características</a>
+          <a href="#" class="text-white px-3 py-2 rounded-md text-sm font-medium">Acerca de</a>
+          <span class="text-gray-200 px-3 py-2 rounded-md text-sm font-medium cursor-not-allowed">Ayuda</span>
+        </div>
+        <div class="md:hidden">
+          <button id="nav-toggle" class="text-white focus:outline-none text-2xl">
+            ☰
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="nav-menu" class="hidden md:hidden bg-orange-500">
+      <a href="#" class="block text-white px-4 py-2">Inicio</a>
+      <a href="#" class="block text-white px-4 py-2">Características</a>
+      <a href="#" class="block text-white px-4 py-2">Acerca de</a>
+      <span class="block text-gray-200 px-4 py-2 cursor-not-allowed">Ayuda</span>
+    </div>
+  </nav>
+
+
+<!-- Carrusel de imágenes -->
+<div class="relative overflow-hidden">
+  <div class="flex transition-transform duration-500" id="carousel">
+    <div class="min-w-full h-[640px] relative">
+      <img src="img/63f4a38ac7d2258fa452f76050ef9e89e3265289d8fb8fa3.avif" alt="Imagen 1" class="w-full h-1000 object-cover">
+      <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-center text-white">
+        <h5 class="font-bebas text-4xl md:text-5xl font-extrabold drop-shadow-lg uppercase tracking-wide">
+          DRAGON BALL XENOVERSE 2 -
+        </h5>
+        <p class="font-bebas text-4xl md:text-5xl font-extrabold drop-shadow-lg mt-2 uppercase tracking-widest">
+          Extra DLC Pack 4
+        </p>
+      </div>
+    </div>
+
+    <div class="min-w-full h-[640px] relative">
+      <img src="img/GohanBeastCharacterSelectXV2.webp" alt="Imagen 2" class="w-full h-800 object-cover">
+      <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-center text-white">
+        <h5 class="font-bebas text-4xl md:text-5xl font-extrabold drop-shadow-lg uppercase tracking-wide">
+          
+        </h5>
+        <p class="font-bebas text-4xl md:text-5xl font-extrabold drop-shadow-lg mt-2 uppercase tracking-widest">
+          Selección de personajes
+        </p>
+      </div>
+    </div>
+
+    <div class="min-w-full h-[640px] relative">
+      <img src="img/ss_8236bd280cfaf7d0494beceafa6f5b2b3ca91e76.600x338.jpg" alt="Imagen 3" class="w-full h-800 object-cover">
+      <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-center text-white">
+        <h5 class="font-bebas text-4xl md:text-5xl font-extrabold drop-shadow-lg uppercase tracking-wide">
+          Dragon Ball 
+        </h5>
+        <p class="font-bebas text-4xl md:text-5xl font-extrabold drop-shadow-lg mt-2 uppercase tracking-widest">
+          DAIMA Pack
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Botones anteriores y siguientes -->
+  <button id="prev" class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-30 hover:bg-opacity-50 text-white p-2 rounded-full focus:outline-none text-xl">
+    ‹
+  </button>
+  <button id="next" class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-30 hover:bg-opacity-50 text-white p-2 rounded-full focus:outline-none text-xl">
+    ›
+  </button>
+</div>
+
+  <!-- Sección de iconos -->
+  <div class="bg-white py-4">
+    <div class="max-w-7xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 items-center text-center">
+      <img src="img/sticker-png-logo-dragon-ball-gt-anime-original-05-dragon-ball-gt.png" alt="Icono 1" class="mx-auto h-12">
+      <img src="img/b67c4674ae69aa5d04b902ae1b934f9e.jpg" alt="Icono 2" class="mx-auto h-12">
+      <img src="img/Dragon_Ball_Daima_Logo.png" alt="Icono 3" class="mx-auto h-12">
+      <img src="img/Dragon_Ball_anime_logo.png" alt="Icono 4" class="mx-auto h-12">
+      <img src="img/Dragon_Ball_Super.png" alt="Icono 5" class="mx-auto h-12">
+      <img src="img/descarga.jpeg" alt="Icono 6" class="mx-auto h-12">
+    </div>
+  </div>
+
+  <!-- Sección "Acerca de" -->
+<section class="max-w-7xl mx-auto mt-12 px-4 text-justify bg-orange-100 text-gray-900">
+  <h2 class="text-4xl font-semibold mb-6">Acerca de Dragon Ball Xenoverse 2</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <p>
+      Dragon Ball Xenoverse 2 es un juego de rol y lucha en 3D que te permite formar parte del universo Dragon Ball como un Patrullero del Tiempo. Podrás crear tu propio personaje, elegir entre varias razas, entrenar con maestros legendarios como Goku y Vegeta, y proteger la historia del tiempo de amenazas alteradas. <br><br>
+      ◆Características destacadas◆ <br>
+      — Viaja a través del tiempo y revive batallas épicas de Dragon Ball Z, GT y Super. <br>
+      — Combates en 3D con habilidades especiales, transformaciones como Super Saiyajin Blue, y ataques definitivos. <br>
+      — Explora Conton City, una ciudad mucho más grande que Toki Toki City, con más actividades, misiones y jugadores.
+    </p>
+    <div>
+      <p>
+        Forma parte de la Patrulla del Tiempo junto a Trunks del futuro y defiende la historia del universo Dragon Ball. Descubre enemigos como Mira, Towa y versiones alternativas de personajes conocidos. Participa en misiones paralelas, desafíos en línea, y eventos de incursión que pondrán a prueba tus habilidades como guerrero Z. <br><br>
+        Elige tu camino, entrena con los más fuertes, domina técnicas como el Kamehameha, el Big Bang Attack o la Genki Dama y alcanza nuevas formas de poder.
+      </p>
+      <div class="p-6 rounded-lg flex flex-col">
+        <a href="#" class="self-center block mx-auto bg-orange-600 hover:bg-orange-700 text-white py-2 px-4 rounded-lg font-semibold">
+          Ver más
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Sección de tarjetas -->
+<section class="max-w-7xl mx-auto mt-12 px-4 bg-orange-100 text-gray-900">
+  <div class="grid gap-8 md:grid-cols-3 text-justify">
+    <div class="p-6 rounded-lg flex flex-col">
+      <img src="img/OYDCKROXGBLEZB6DVZ2SZX4KJU.avif" alt="Vegeta" class="mx-auto h-60 w-32 object-cover rounded-full mb-4">
+      <h5 class="text-xl font-semibold mb-2 text-center">Vegeta</h5>
+      <p class="mb-4">El orgulloso príncipe de los Saiyajin. Siempre en busca de superar a Goku, Vegeta domina técnicas como el Final Flash y el Big Bang Attack. En Xenoverse 2, puede entrenarte para que desarrolles todo tu potencial de combate.</p>
+      <a href="#" class="self-center block mx-auto bg-orange-600 hover:bg-orange-700 text-white py-2 px-4 rounded-lg font-semibold">Historia</a>
+    </div>
+    <div class="p-6 rounded-lg flex flex-col">
+      <img src="img/filters_quality(95)format(webp).webp" alt="Gohan" class="mx-auto h-60 w-32 object-cover rounded-full mb-4">
+      <h5 class="text-xl font-semibold mb-2 text-center">Gohan Beast</h5>
+      <p class="mb-4">Una versión alternativa de Gohan con un poder desatado nunca antes visto. Esta transformación aparece como parte de los nuevos DLC y destaca por su fuerza devastadora y ataques de ráfaga de energía.</p>
+      <a href="#" class="self-center block mx-auto bg-orange-600 hover:bg-orange-700 text-white py-2 px-4 rounded-lg font-semibold">Historia</a>
+    </div>
+    <div class="p-6 rounded-lg flex flex-col">
+      <img src="img/Fr7kWkQX0CASmx_.jpg" alt="Cell Max" class="mx-auto h-60 w-32 object-cover rounded-full mb-4">
+      <h5 class="text-xl font-semibold mb-2 text-center">Cell Max</h5>
+      <p class="mb-4">Una amenaza colosal y uno de los enemigos más recientes en la franquicia. Cell Max es un jefe de evento en Xenoverse 2, con ataques brutales que requieren cooperación entre jugadores para vencerlo en misiones de incursión.</p>
+      <a href="#" class="self-center block mx-auto bg-orange-600 hover:bg-orange-700 text-white py-2 px-4 rounded-lg font-semibold">Historia</a>
+    </div>
+  </div>
+</section>
+
+  <!-- Pie de página -->
+  <footer class="bg-gray-800 text-gray-200 mt-12">
+    <div class="max-w-7xl mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div><h5 class="font-semibold mb-2">→Inicio<br>→Características<br>→Acerca de<br>→Ayuda</h5></div>
+      <div><h5 class="font-semibold mb-2">Todos los derechos reservados-Matias Tonato<br>Contacto: 0992880540</h5></div>
+      <div>
+        <h5 class="font-semibold mb-2">Todas las redes sociales</h5>
+        <div class="flex space-x-4">
+          <img src="img/icono-redes-sociales-vector-instagram-7-junio-2021-bangkok-tailandia_53876-136728.avif" alt="Red social 1" class="h-8">
+          <img src="img/logotipo-facebook_1080029-107.avif" alt="Red social 2" class="h-8">
+          <img src="img/WhatsApp.svg.webp" alt="Red social 3" class="h-8">
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script para carrusel y menú móvil -->
+  <script>
+    const track = document.getElementById('carousel');
+    const slides = Array.from(track.children);
+    let index = 0;
+    document.getElementById('next').addEventListener('click', () => {
+      index = (index + 1) % slides.length;
+      track.style.transform = `translateX(-${index * 100}%)`;
+    });
+    document.getElementById('prev').addEventListener('click', () => {
+      index = (index - 1 + slides.length) % slides.length;
+      track.style.transform = `translateX(-${index * 100}%)`;
+    });
+    document.getElementById('nav-toggle').addEventListener('click', () => {
+      document.getElementById('nav-menu').classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
